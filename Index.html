@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Puchi'Store</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <section id="menu_principal">
+        <img src="img/LogoStore.png">
+    </section>
+
+
+    <h1 style="font-size:45px; text-align:center;">Bienvenid@ a Puchi'Store</h1>
+    <div class="transparente"></div>
+    <div class="mycontainer">
+        <div class="mision">
+            <h2>Misión</h2>
+            <p>Ofrecer productos de la mejor calidad a precios justos inspirados en personajes y estilos que nos acompañan desde la infancia, llevando alegría, color y diversión al día a día</p>
+        </div>
+
+        <div class="vision">
+            <h2>Visión</h2>
+            <p>Anhelamos convertirnos en tu cómplice para llevar un regalo especial a tu niño interior</p>
+        </div>
+    </div>
+
+
+    <div style="text-align:center; margin-top:20px;">
+        <h2> <br> Elige una opción para ver nuestro catálogo <br> </h2>
+    </div>
+
+    <div class="contenedor_botones">
+
+        <div class="categoria">
+            <button class="cat_btn bg_sleepwear">Sleepwear</button>
+            <p class="cat_desc">Pijamas y ropa cómoda para descansar</p>
+        </div>
+
+        <div class="categoria">
+            <button class="cat_btn bg_chamarras">Chamarras y Sudaderas</button>
+            <p class="cat_desc">Prendas abrigadoras para cualquier temporada</p>
+        </div>
+
+        <div class="categoria">
+            <button class="cat_btn bg_casual">Ropa Casual y Calzado</button>
+            <p class="cat_desc">Outfits diarios y calzado cómodo</p>
+        </div>
+
+        <div class="categoria">
+            <button class="cat_btn bg_hogar">Colección Hogar</button>
+            <p class="cat_desc">Artículos decorativos y funcionales</p>
+        </div>
+
+        <div class="categoria">
+            <button class="cat_btn bg_otros">Otros Productos</button>
+            <p class="cat_desc">Productos especiales y variados</p>
+        </div>
+
+    </div>
+
+
+    <div class="login_container">
+
+        <h2>Iniciar sesión</h2>
+
+        <form class="login_form">
+            <!-- Formulario para iniciar sesión -->
+            <input type="email" placeholder="Correo electrónico" required>
+            <!-- Ingersar correo -->
+            <input type="password" placeholder="Contraseña" required>
+            <!-- Ingresar la contraseña -->
+
+            <button type="submit" class="login_btn">Iniciar sesión</button>
+        </form>
+
+        <p class="crear_cuenta">¿No tienes cuenta?<a href="#"> Crear cuenta</a>
+            <!-- "Enlace" para crear una nueva cuenta -->
+        </p>
+
+    </div>
+
+
+    <div style="text-align:center; margin-top:30px;">
+        <button id="cambiarColor">Cambiar color</button>
+    </div>
+
+    <script>
+        const boton = document.getElementById("cambiarColor");
+
+        boton.addEventListener("click", () => {
+            document.body.classList.toggle("daltonico");
+
+            if (document.body.classList.contains("daltonico")) {
+                boton.textContent = "Modo normal";
+            } else {
+                boton.textContent = "Activar modo daltónico";
+            }
+        });
+    </script>
+
+</body>
+<footer class="footer">
+    <p>Síguenos en nuestras redes sociales</p>
+
+    <div class="redes">
+        <a href="#" target="_blank">Instagram: @puchistore__</a>
+        <a href="#" target="_blank">Facebook: @_puchistore_</a>
+        <a href="#" target="_blank">@TikTok: puchistoree</a>
+    </div>
+
+    <p class="copy">© 2026 Puchi'Store</p>
+</footer>
+
+</html>
