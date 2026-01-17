@@ -1,0 +1,335 @@
+#menu_principal {
+    background-color: rgb(175, 198, 246);
+    display: flex;
+    /* Flexbox para alinear contenido */
+    justify-content: flex-start;
+    /* Logo alineado a la izquierda */
+    align-items: auto;
+    padding: 8px 20px;
+    /* Espaciado interno */
+}
+
+
+/* Imagen del logo en el header */
+
+#menu_principal img {
+    max-width: 55px;
+    /* Tamaño del logo */
+    height: auto;
+}
+
+.mision,
+.vision {
+    background-color: rgba(255, 255, 255, 0.4);
+    /* Color blanco transparente */
+    color: rgb(6, 7, 61);
+    padding: 20px;
+    border-radius: 12px;
+    /* Bordes redondeados */
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Sombra difuminada */
+    backdrop-filter: blur(4px);
+    /* Efecto borrosito */
+}
+
+.transparente {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+    /* Detrás de todo */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondo.png');
+    /* Imagen de fondo */
+    background-size: cover;
+    /* Cubre toda la pantalla */
+    z-index: -1;
+}
+
+h1,
+h2,
+h3 {
+    color: rgb(6, 7, 61);
+}
+
+.mycontainer {
+    display: flex;
+    /* Coloca misión y visión en fila */
+    width: 100%;
+    gap: 20px;
+    /* Espacio entre tarjetas */
+}
+
+.mycontainer>div {
+    flex: 1;
+    /* Ambas ocupan el mismo ancho */
+}
+
+.contenedor_botones {
+    display: flex;
+    justify-content: center;
+    /* Centrado horizontal */
+    gap: 30px;
+    /* Espacio entre botones */
+    flex-wrap: nowrap;
+    /* No se van abajo si no caben */
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    /* Botón arriba y texto abajo */
+    align-items: center;
+    margin: 10px;
+}
+
+.cat_btn {
+    width: 225px;
+    /* Ancho */
+    height: 160px;
+    /* Largo */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    /* Sombra al texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    /* La imagen cubre todo el botón */
+    background-position: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    position: relative;
+}
+
+
+/* Efecto hover del botón (cuando pasa el cursor) */
+
+.categoria:hover .cat_btn {
+    transform: scale(1.08);
+    /* Crece ligeramente */
+    filter: brightness(1.15);
+    /* Se ilumina */
+}
+
+.bg_sleepwear {
+    background-image: url('../img/sleepwear.png');
+}
+
+.bg_chamarras {
+    background-image: url('../img/chamarras.png');
+}
+
+.bg_casual {
+    background-image: url('../img/casual.png');
+}
+
+.bg_hogar {
+    background-image: url('../img/hogar.png');
+}
+
+.bg_otros {
+    background-image: url('../img/otros.png');
+}
+
+.cat_desc {
+    opacity: 0;
+    /* Oculto al principio*/
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(6, 7, 61);
+    text-align: center;
+    max-width: 220px;
+    transition: opacity 0.3s ease;
+}
+
+
+/* Se muestra al pasar el mouse */
+
+.categoria:hover .cat_desc {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.login_container {
+    width: 350px;
+    margin: 50px auto;
+    /* Centrado */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.login_container h2 {
+    margin-bottom: 20px;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login_form input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.login_btn {
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: rgb(102, 146, 241);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login_btn:hover {
+    background-color: rgb(72, 111, 221);
+}
+
+.crear_cuenta {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.crear_cuenta a {
+    color: rgb(72, 111, 221);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.crear_cuenta a:hover {
+    text-decoration: underline;
+}
+
+#cambiarColor {
+    background-color: #66a1ff;
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(102, 146, 241, 0.4);
+}
+
+#cambiarColor:hover {
+    background-color: rgb(91, 129, 235);
+    transform: scale(1.05);
+}
+
+body.daltonico {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+body.daltonico #menu_principal {
+    background-color: #004aad;
+}
+
+body.daltonico .mycontainer>div {
+    background-color: #007acc;
+    color: white;
+}
+
+body.daltonico .cat_btn {
+    background-color: #ff9800;
+    color: black;
+    text-shadow: none;
+}
+
+body.daltonico .cat_btn:hover {
+    background-color: #ffb74d;
+}
+
+body.daltonico h1,
+body.daltonico h2,
+body.daltonico h3,
+body.daltonico .cat_desc {
+    color: #000;
+}
+
+body.daltonico .login_container {
+    background-color: #fff;
+    color: #000;
+}
+
+body.daltonico .login_btn {
+    background-color: #ff9800;
+    color: black;
+}
+
+body.daltonico .login_btn:hover {
+    background-color: #ffb74d;
+}
+
+body.daltonico .crear_cuenta a {
+    color: #004aad;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 25px 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+}
+
+.footer p {
+    margin: 10px 0;
+    color: rgb(6, 7, 61);
+    font-size: 14px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 15px 0;
+}
+
+.redes a {
+    text-decoration: none;
+    color: rgb(72, 111, 221);
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes a:hover {
+    color: rgb(102, 146, 241);
+    transform: scale(1.1);
+}
+
+.copy {
+    font-size: 12px;
+    opacity: 0.8;
+}
